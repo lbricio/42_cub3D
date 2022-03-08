@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_input.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbricio- <lbricio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 20:26:01 by lbricio-          #+#    #+#             */
-/*   Updated: 2022/03/08 14:13:49 by lbricio-         ###   ########.fr       */
+/*   Updated: 2022/03/09 00:00:14 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static void	substitute_chars(t_data *data)
 		while (++y < data->map.height)
 		{
 			if (data->map.d2[x][y] == ' ' || data->map.d2[x][y] == 'N' \
-				|| data->map.d2[x][y] == 'E' | data->map.d2[x][y] == 'S' \
+				|| data->map.d2[x][y] == 'E' || data->map.d2[x][y] == 'S' \
 				|| data->map.d2[x][y] == 'W')
 				data->map.d2[x][y] = '0';
 		}

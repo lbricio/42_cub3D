@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   key_press_release.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbricio- <lbricio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 20:26:43 by lbricio-          #+#    #+#             */
-/*   Updated: 2022/03/08 13:27:29 by lbricio-         ###   ########.fr       */
+/*   Updated: 2022/03/08 23:49:19 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,6 @@ int	key_press(int key, t_data *data)
 	else if (key == KEY_PAUSE)
 	{
 		data->key.pause *= -1;
-		if (data->key.pause < 0)
-			mlx_mouse_show();
-		else
-			mlx_mouse_hide();
 	}	
 	return (0);
 }

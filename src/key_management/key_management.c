@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   key_management.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbricio- <lbricio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 20:26:32 by lbricio-          #+#    #+#             */
-/*   Updated: 2022/03/08 15:01:41 by lbricio-         ###   ########.fr       */
+/*   Updated: 2022/03/08 23:59:59 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,10 +56,10 @@ int	mouse_move(int x, int y, t_data *data)
 	(void)y;
 	if (data->key.pause > 0)
 	{
-		mlx_mouse_move(data->mlx_win, SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
-		if (x - 10 > SCREEN_WIDTH / 2)
+		mlx_mouse_move(data->mlx, data->mlx_win, (SCREEN_WIDTH) / 2, (SCREEN_HEIGHT) / 2);
+		if (x - 10 > (SCREEN_WIDTH) / 2)
 			rotate_right(data);
-		else if (x + 10 < SCREEN_WIDTH / 2)
+		else if (x + 10 < (SCREEN_WIDTH) / 2)
 			rotate_left(data);
 	}
 	return (0);
@@ -69,10 +69,8 @@ int	ft_close(t_data *data)
 {
 	(void) *data;
 	int x;
-	int y;
 
 	x = 0;
-	y = 0;
 	while(x++ < data->map.width - 1)
 		free(data->world_map[x]);
 	x = 0;

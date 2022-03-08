@@ -1,31 +1,22 @@
-#
-#
+##
+## Makefile for MiniLibX in /home/boulon/work/c/raytraceur/minilibx
+## 
+## Made by Olivier Crouzet
+## Login   <ol@epitech.net>
+## 
+## Started on  Tue Oct  5 15:56:43 2004 Olivier Crouzet
+## Last update Tue May 15 15:44:41 2007 Olivier Crouzet
+##
 
-NOM=libmlx.a
-SRC= mlx_shaders.c mlx_new_window.m mlx_init_loop.m mlx_new_image.m mlx_xpm.c mlx_int_str_to_wordtab.c
-SRC+= mlx_png.c mlx_mouse.m
-OBJ1=$(SRC:.c=.o)
-OBJ=$(OBJ1:.m=.o)
-CFLAGS+=-O2
-
-# add to match string put with X11 in size and position
-CFLAGS+= -DSTRINGPUTX11
-
-%.o : %.c
-	@cc -O2 -w -DSTRINGPUTX11   -c -o $@ $<
-
-%.o : %.m
-	@cc -O2 -w -DSTRINGPUTX11   -c -o $@ $<
+## Please use configure script
 
 
-all: $(NOM)
+all	: do_configure
 
-$(NOM):	$(OBJ)
-	@ar -rc $(NOM) $(OBJ)
-	@ranlib $(NOM)
+do_configure	:
+	./configure
 
-clean:
-	@rm -f $(NOM) $(OBJ) *~
-	@rm -f mlx_app
+clean	:
+	./configure clean
 
-re: clean all
+re	: clean all

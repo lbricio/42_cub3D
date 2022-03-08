@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbricio- <lbricio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 21:43:28 by lbricio-          #+#    #+#             */
-/*   Updated: 2022/03/08 13:26:31 by lbricio-         ###   ########.fr       */
+/*   Updated: 2022/03/08 23:48:35 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ int	main(int argc, char **argv)
 	initialize_map(&data);
 	data.mlx_win = mlx_new_window(data.mlx, SCREEN_WIDTH, \
 		SCREEN_HEIGHT, "Cub3d");
-	mlx_mouse_hide();
 	mlx_loop_hook(data.mlx, game_on, &data);
 	mlx_hook(data.mlx_win, 2, 0, &key_press, &data);
 	mlx_hook(data.mlx_win, 3, 0, &key_release, &data);

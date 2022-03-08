@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lbricio- <lbricio-@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: coder <coder@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/21 13:20:00 by lbricio-          #+#    #+#              #
-#    Updated: 2022/03/08 12:34:10 by lbricio-         ###   ########.fr        #
+#    Updated: 2022/03/09 00:03:25 by coder            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,8 +59,7 @@ LIBFT = $(addprefix $(LIBFT_DIR), libft.a)
 MINLBX	= $(addprefix $(MINLBX_DIR), libmlx.a)
 
 # Libft and Minilibx linkers
-LNK  = -L $(LIBFT_DIR) -lft -L $(MINLBX_DIR) \
-			-lmlx -framework OpenGL -framework AppKit
+LNK  = -L $(LIBFT_DIR) -lft -I $(MINLBX_DIR) -L $(MINLBX_DIR) -lmlx -Ilmlx -lXext -lX11
 
 # all rule
 all: obj $(LIBFT) $(MINLBX) $(NAME)
