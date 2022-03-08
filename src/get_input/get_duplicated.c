@@ -6,7 +6,7 @@
 /*   By: lbricio- <lbricio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 17:35:05 by lbricio-          #+#    #+#             */
-/*   Updated: 2022/03/08 00:16:58 by lbricio-         ###   ########.fr       */
+/*   Updated: 2022/03/08 11:04:27 by lbricio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,34 +32,34 @@ static void	pick_info(t_info *info, char *actual)
 {
 	if (actual == NULL)
 	{
-		info->NO = 0;
-		info->SO = 0;
-		info->EA = 0;
-		info->WE = 0;
-		info->C = 0;
-		info->F = 0;
+		info->no = 0;
+		info->so = 0;
+		info->ea = 0;
+		info->we = 0;
+		info->c = 0;
+		info->f = 0;
 	}
 	else
 	{
 		if (!ft_strncmp(actual, "NO ", 3))
-			info->NO += 1;
+			info->no += 1;
 		if (!ft_strncmp(actual, "SO ", 3))
-			info->SO += 1;
+			info->so += 1;
 		if (!ft_strncmp(actual, "WE ", 3))
-			info->WE += 1;
+			info->we += 1;
 		if (!ft_strncmp(actual, "EA ", 3))
-			info->EA += 1;
+			info->ea += 1;
 		if (!ft_strncmp(actual, "F ", 2))
-			info->F += 1;
+			info->f += 1;
 		if (!ft_strncmp(actual, "C ", 2))
-			info->C += 1;
+			info->c += 1;
 	}
 }
 
 int	check_picked(t_info *info)
 {
-	if ((info->NO == 1) && (info->SO == 1) && (info->WE == 1) \
-	&& (info->EA == 1) && (info->F == 1) && (info->C == 1))
+	if ((info->no == 1) && (info->so == 1) && (info->we == 1) \
+	&& (info->ea == 1) && (info->f == 1) && (info->c == 1))
 		return (SUCCESS);
 	else
 		return (FAILURE);
