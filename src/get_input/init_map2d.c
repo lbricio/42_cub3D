@@ -6,7 +6,7 @@
 /*   By: lbricio- <lbricio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 20:25:32 by lbricio-          #+#    #+#             */
-/*   Updated: 2022/03/07 17:00:51 by lbricio-         ###   ########.fr       */
+/*   Updated: 2022/03/08 14:46:53 by lbricio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,5 +84,6 @@ int	init_map2d(t_data *data)
 		}
 	}
 	init_map2d_helper(data);
+	data->size_fi = y;
 	return (SUCCESS);
 }

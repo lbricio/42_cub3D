@@ -6,7 +6,7 @@
 /*   By: lbricio- <lbricio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 20:26:43 by lbricio-          #+#    #+#             */
-/*   Updated: 2022/03/03 20:26:45 by lbricio-         ###   ########.fr       */
+/*   Updated: 2022/03/08 13:27:29 by lbricio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	key_press(int key, t_data *data)
 {
 	if (key == KEY_ESCAPE)
-		exit(0);
+		ft_close(data);
 	else if (key == KEY_ANSI_W)
 		data->key.w = 1;
 	else if (key == KEY_ANSI_S)

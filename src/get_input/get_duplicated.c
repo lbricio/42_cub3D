@@ -6,7 +6,7 @@
 /*   By: lbricio- <lbricio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 17:35:05 by lbricio-          #+#    #+#             */
-/*   Updated: 2022/03/08 11:04:27 by lbricio-         ###   ########.fr       */
+/*   Updated: 2022/03/08 14:08:15 by lbricio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ int	find_duplicated(t_valid *v, int in, char *file)
 	t_info	info;
 
 	data_count = 0;
-	actual = malloc(800);
+	actual = malloc(200);
 	pick_info(&info, NULL);
 	while (v->str != NULL)
 	{
@@ -84,10 +84,10 @@ int	find_duplicated(t_valid *v, int in, char *file)
 				data_count++;
 		gnl(&(v->str), in);
 	}
+	free(actual);
 	if (data_count > 6 || check_picked(&info) == 1)
 		return (printf("Error\nBad element found\n"));
 	close(in);
-	free(actual);
 	v->in = open(file, O_RDONLY);
 	v->str = get_next_line(v->in);
 	return (SUCCESS);

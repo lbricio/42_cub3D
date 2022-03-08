@@ -6,7 +6,7 @@
 /*   By: lbricio- <lbricio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 20:56:41 by lbricio-          #+#    #+#             */
-/*   Updated: 2022/03/08 00:48:42 by lbricio-         ###   ########.fr       */
+/*   Updated: 2022/03/08 14:17:49 by lbricio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -182,6 +182,10 @@ typedef struct s_data
 	double	rot_speed;
 	int		**world_map;
 	int		texture[4][TEX_HEIGHT * TEX_WIDTH];
+	int		size_fi;
+	int		size_fii;
+	int 	size_fj;
+	int		size_fjj;
 }			t_data;
 
 /* check input and receive map */

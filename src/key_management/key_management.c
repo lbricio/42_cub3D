@@ -6,7 +6,7 @@
 /*   By: lbricio- <lbricio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 20:26:32 by lbricio-          #+#    #+#             */
-/*   Updated: 2022/03/07 11:51:08 by lbricio-         ###   ########.fr       */
+/*   Updated: 2022/03/08 15:01:41 by lbricio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,20 @@ int	mouse_move(int x, int y, t_data *data)
 
 int	ft_close(t_data *data)
 {
-	(void)	*data;
+	(void) *data;
+	int x;
+	int y;
+
+	x = 0;
+	y = 0;
+	while(x++ < data->map.width - 1)
+		free(data->world_map[x]);
+	x = 0;
+	while(x++ < data->map.width - 1)
+		free(data->map.d2[x]);	
+	free(data->map.d1);
+	free(data->map.d2);
+	free(data);
+	mlx_destroy_window(data->mlx, data->mlx_win);
 	exit(0);
 }
