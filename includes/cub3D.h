@@ -6,7 +6,7 @@
 /*   By: lbricio- <lbricio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 20:56:41 by lbricio-          #+#    #+#             */
-/*   Updated: 2022/03/07 11:24:50 by lbricio-         ###   ########.fr       */
+/*   Updated: 2022/03/08 00:48:42 by lbricio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,13 +150,13 @@ typedef struct s_val
 
 typedef struct s_info
 {
-	int	NO;
-	int	SO;
-	int	EA;
-	int	WE;
-	int C;
-	int F;
-}			t_info;
+	int	no;
+	int	so;
+	int	ea;
+	int	we;
+	int	c;
+	int	f;
+}		t_info;
 
 typedef struct s_data
 {

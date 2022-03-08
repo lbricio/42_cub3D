@@ -6,17 +6,12 @@
 /*   By: lbricio- <lbricio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 21:43:28 by lbricio-          #+#    #+#             */
-/*   Updated: 2022/03/07 10:55:34 by lbricio-         ###   ########.fr       */
+/*   Updated: 2022/03/07 16:47:38 by lbricio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3D.h"
 
-/*
-1. a simple check at argv[1]
-2. save all map settings + save all map strings
-3. 
-*/
 int	get_input(t_data *data, int argc, char *argv[])
 {
 	if (simple_arg_check(argc, argv))

@@ -6,7 +6,7 @@
 /*   By: lbricio- <lbricio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 20:26:15 by lbricio-          #+#    #+#             */
-/*   Updated: 2022/03/03 20:26:17 by lbricio-         ###   ########.fr       */
+/*   Updated: 2022/03/08 00:46:57 by lbricio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,20 +47,24 @@ static int	helper2(t_data *data, char **input, char **rgb)
 
 static int	helper3(t_color *c)
 {
+	int	number;
+
 	if (ft_strlen(c->rgb[c->i]) == 3)
 	{
 		if (!ft_isdigit(c->rgb[c->i][c->j]))
 			return (helper(c->input, c->rgb, "Error\nColors must be digits\n"));
-		if ((c->j == 0 && ft_id(c->rgb[c->i][c->j]) && c->rgb[c->i][c->j] > '2')
-			|| (c->j == 1 && ft_id(c->rgb[c->i][c->j]) \
-				&& c->rgb[c->i][c->j] > '5'))
+		number = 0;
+		number += (c->rgb[c->i][0] - 48) * 100;
+		number += (c->rgb[c->i][1] - 48) * 10;
+		number += (c->rgb[c->i][2] - 48) * 1;
+		if (number < 0 || number > 255)
 			return (helper(c->input, c->rgb, "Error\nColor range [0,255]\n"));
 	}
 	else
 	{
 		if (!ft_isdigit(c->rgb[c->i][c->j]))
 			return (helper(c->input, c->rgb, "Error\nColors must be digits\n"));
-	}
+	}	
 	return (SUCCESS);
 }
 

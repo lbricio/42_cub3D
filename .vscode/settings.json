@@ -1,0 +1,8 @@
+{
+	"files.associations": {
+		"sstream": "c",
+		"algorithm": "c",
+		"complex": "c",
+		"new": "c"
+	}
+}

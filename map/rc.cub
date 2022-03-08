@@ -1,11 +1,10 @@
-
-F 100,100,255
-C 0,0,0
-
 EA ./textures/wood.xpm
 NO ./textures/redbrick.xpm
 SO ./textures/bluestone.xpm
 WE ./textures/purplestone.xpm
+
+F 255,240,255
+C 100,100,255
 
         1111111111111111111111111
         1000000000110000000000001
