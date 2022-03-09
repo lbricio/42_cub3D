@@ -84,6 +84,5 @@ int	init_map2d(t_data *data)
 		}
 	}
 	init_map2d_helper(data);
-	data->size_fi = y;
 	return (SUCCESS);
 }

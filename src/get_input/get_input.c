@@ -96,6 +96,5 @@ int	build_map_array(t_data *data)
 		}
 	}
 	fill_world_map(data);
-	data->size_fj = x;
 	return (SUCCESS);
 }
