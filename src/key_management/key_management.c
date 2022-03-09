@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 20:26:32 by lbricio-          #+#    #+#             */
-/*   Updated: 2022/03/08 23:59:59 by coder            ###   ########.fr       */
+/*   Updated: 2022/03/09 17:35:21 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,8 @@ int	mouse_move(int x, int y, t_data *data)
 	(void)y;
 	if (data->key.pause > 0)
 	{
-		mlx_mouse_move(data->mlx, data->mlx_win, (SCREEN_WIDTH) / 2, (SCREEN_HEIGHT) / 2);
+		mlx_mouse_move(data->mlx, data->mlx_win, (SCREEN_WIDTH) / 2,
+			(SCREEN_HEIGHT) / 2);
 		if (x - 10 > (SCREEN_WIDTH) / 2)
 			rotate_right(data);
 		else if (x + 10 < (SCREEN_WIDTH) / 2)
@@ -68,17 +69,14 @@ int	mouse_move(int x, int y, t_data *data)
 int	ft_close(t_data *data)
 {
 	(void) *data;
-	int x;
-
-	x = 0;
-	while(x++ < data->map.width - 1)
-		free(data->world_map[x]);
-	x = 0;
-	while(x++ < data->map.width - 1)
-		free(data->map.d2[x]);	
-	free(data->map.d1);
-	free(data->map.d2);
-	free(data);
+	mlx_destroy_display(data->mlx);
 	mlx_destroy_window(data->mlx, data->mlx_win);
+	free(data->mlx);
+	free(data->map.no);
+	free(data->map.so);
+	free(data->map.we);
+	free(data->map.ea);
+	ft_free_array((char **)data->world_map);
+	ft_free_array((char **)data->map.d2);
 	exit(0);
 }

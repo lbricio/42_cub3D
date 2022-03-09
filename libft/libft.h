@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbricio- <lbricio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 13:33:56 by lbricio-          #+#    #+#             */
-/*   Updated: 2022/03/08 11:10:52 by lbricio-         ###   ########.fr       */
+/*   Updated: 2022/03/09 17:32:22 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,13 @@ typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}					t_list;	
+}					t_list;
+
+typedef struct s_split_next
+{
+	size_t		start;
+	size_t		length;
+}				t_split_next;
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);

@@ -3,7 +3,7 @@ NO ./textures/redbrick.xpm
 SO ./textures/bluestone.xpm
 WE ./textures/purplestone.xpm
 
-F 255,200,255
+F 255,2000,255
 C 100,100,255
 
         1111111111111111111111111
